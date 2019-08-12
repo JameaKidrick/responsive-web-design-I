@@ -50,7 +50,9 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 html, body {
@@ -64,10 +66,10 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* HOME PAGE CODE */
+/******************** HOME PAGE CODE ********************/
 
 .navBar{
-	width: 890px;
+	width: 880px;
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
@@ -86,7 +88,7 @@ nav a{
 }
 
 .eyeCatcher{
-	width:890px;
+	width:880px;
 	display:flex;
 	justify-content: flex-end;
 }
@@ -112,13 +114,13 @@ nav a{
 .content{
 	border-top: 1.5px solid black;
 	border-bottom: 1.5px solid black;
-	width:890px;
+	width:880px;
 	margin-top:50px;
 	margin-bottom: 50px;
 }
 
 .first{
-	width:890px;
+	width:880px;
 	display: flex;
 	margin-top:50px;
 	margin-bottom: 45px;
@@ -129,11 +131,11 @@ nav a{
 }
 
 .middle-img{
-	width: 890px;
+	width: 880px;
 }
 
 .second{
-	width:890px;
+	width:880px;
 	display: flex;
 	justify-content: space-between;
 	margin-top:30px;
@@ -149,21 +151,11 @@ address{
 	flex-direction: column;
 }
 
-.address{
-	width:200px;
-}
-
-.number{
-	width:200px;
-	margin-top:15px;
-}
-.email{
-	width:200px;
+.number, .email{
 	margin-top:15px;
 }
 
 .copyright{
-	align-self:center;
 	margin-top: 50px;
 	margin-left:370px;
 }
@@ -172,14 +164,14 @@ body{
 	margin-left:20%;
 }
 
-/* SERVICES PAGE CODE */
+/******************** SERVICES PAGE CODE ********************/
 
 /* Webpage Sizing
 	.box{
 		position:relative;
 		border: 5px solid red;
 		height:210px;
-		width:890px;
+		width:880px;
 		bottom:212px;
 }*/
 h4{
@@ -193,7 +185,7 @@ h2{
 .allContent{
 	border-top: 1.5px solid black;
 	border-bottom: 1.5px solid black;
-	width:890px;
+	width:880px;
 	height: 850px;
 	padding-top:35px;
 	margin:35px 0px;
@@ -233,7 +225,7 @@ h2{
 
 .introS{
 	/* border: 3px solid red; */
-	width: 890px;
+	width: 880px;
 	margin-top: 35px;
 }
 
@@ -242,7 +234,7 @@ h2{
 }
 
 .bottom{
-	width: 890px;
+	width: 880px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap:wrap;
@@ -269,4 +261,143 @@ ul li{
 	margin-bottom: 15px;
 }
 
+/******************** MEDIA RESPONSIVE CODE ********************/
 
+/********** TABLET **********/
+@media(max-width: 800px){
+    body{
+        /* background:blue; */
+        margin: 0 auto;
+        width: 100%;
+    }
+    .navBar{
+        height: 13vh;
+        margin-bottom: 50px;
+        text-align: center;
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+    nav{
+        display:flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .circleimg{
+        display: none;
+    }
+    .eyeCatcher{
+        /* border: 2px solid red; */
+        display:flex;
+        justify-content: center;
+    }
+    .slogan{
+        font-size: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button{
+        border: 1.5px solid black;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        width: 57%;
+    }
+    .content{
+        margin: 0 auto;
+        border-top: 1.5px solid black;
+        border-bottom: 1.5px solid black;
+        width:93%;
+        margin-top:50px;
+        margin-bottom: 50px;
+    }
+    .details{
+        /* border: 2px solid red; */
+        margin: 0 auto;
+        width: 93%;
+    }
+    .copyright{
+        /* border:2px solid blue; */
+        text-align: center;
+        margin:0 auto;
+        margin-top: 45px;
+    }
+}
+
+/********** MOBILE **********/
+@media(max-width: 500px){
+    h2{
+        font-size: 15px;
+    }
+    .navBar{
+        /* border: 2px solid red; */
+        height: 60%;
+        margin-bottom: 50px;
+        text-align: center;
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    nav{
+        /* border: 2px solid blue; */
+        display:flex;
+        flex-direction: column;
+    }
+    nav a{
+        border-bottom: 1px solid grey;
+        padding: 5% 0;
+    }
+    #serv{
+        border-top:1px solid grey;
+    }
+    .slogan{
+        font-size: 55px;
+    }
+    .button{
+        border: 1px solid black;
+        text-align: center;
+        font-size: 13px;
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+    }
+    .content{
+        /* border: 2px solid blue; */
+        border-top: 1.5px solid black;
+        border-bottom: 1.5px solid black;
+        width:93%;
+        margin-bottom: 30px;
+    }
+    .first{
+        /* border: 2px solid yellow; */
+        height: 30%;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top:40px;
+        margin-bottom: 35px;
+    }
+    .featurescontent, .aboutcontent, .servicescontent, .productcontent, .visioncontent{
+        width:100%;
+    }
+    .second{
+        /* border: 2px solid green; */
+        font-size: 12px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top:20px;
+        margin-bottom: 30px;
+    }
+    address, .copyright{
+        font-size:12px;
+    }
+    .copyright{
+        margin-top:30px;
+    }
+}
